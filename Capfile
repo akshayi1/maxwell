@@ -7,6 +7,7 @@ set :config_files, %w(exodus_binlog_service.yml)
 
 namespace :deploy do
   task :restart do
+    run "sudo sv restart /etc/service/binlog_service"
   end
 
   task :configure do
